@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+cat << heredoc
+====================
+Title: Speedup
+Desc: Cleanup script
+====================
+heredoc
+
+if (( $EUID == 0 ))
+then
+    fstrim -av;
+    sync; echo 3 > /proc/sys/vm/drop_caches
+    sync; echo 3 >> /proc/sys/vm/drop_caches
+    rm -rfv /var/log/*
+
+
+else
+    echo "Please run this as root." | lolcat
+fi

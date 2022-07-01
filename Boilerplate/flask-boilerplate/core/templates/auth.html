@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Auth{% endblock %}
+{% block main %}
+    <h1>Auth</h1>
+    
+    <form action="{{ url_for('views.auth') }}" method="POST">
+        <input type="text" name="email" id="email" placeholder="Email: " required>
+        <input type="password" name="password" id="password" placeholder="Password: " required>
+
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

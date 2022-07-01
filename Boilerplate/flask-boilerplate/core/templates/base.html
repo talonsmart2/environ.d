@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Flask-boilerplate</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comp.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <p>flask-boilerplate</p>
+
+            <div class="links">
+                <a href="{{ url_for('views.index') }}" class="link" rel="noopener noreferrer">Index</a> / 
+                <a href="{{ url_for('views.auth') }}" class="link" rel="noopener noreferrer">Auth</a>
+            </div>
+        </header>
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy 30-silver</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/global/func.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/global/init.js') }}"></script>
+</body>
+</html>

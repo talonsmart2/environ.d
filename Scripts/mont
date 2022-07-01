@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+cat << heredoc
+=============================
+Title: Month Shortener
+Desc: Convert Long Months to Short
+=============================
+heredoc
+
+if (( $EUID != 0 ))
+then
+    mv January Jan
+    mv February Feb
+    mv March Mar
+    mv April Apr
+    mv June Jun
+    mv July Jul
+    mv August Aug
+    mv September Sep
+    mv October Oct
+    mv November Nov
+    mv December Dec
+else
+    echo "Please don't run this as root." | lolcat
+fi

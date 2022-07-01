@@ -1,0 +1,27 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"LowLevelHooksTimeout"="1000"
+"MenuShowDelay"="0"
+"HungAppTimeout"="1000"
+"CursorBlinkRate"="150"
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseHoverTime"="100"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize]
+"StartupDelayInMSec"="0"
+
+;Set this to the amount of L2 CPU cache you have. You can check this in your Task manager
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"SecondLevelDataCache"="1024"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
+"IRPStackSize"="50"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"DefaultTTL"="64"
+"TCP1323Opts"="1"
+"MaxFreeTcbs"="65536"
+"MaxUserPort"="65534"
+"GlobalMaxTcpWindowSize"="65535"

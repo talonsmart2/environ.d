@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+if (( $EUID == 0 ))
+then
+    cat << heredoc
+=========================================
+Title: WipeDroid
+Desc: Wipes all partitions on a rooted Android phone
+=========================================
+heredoc
+    echo "Wiping Android phone";
+
+    fastboot erase userdata;
+    fastboot erase system;
+    fastboot erase cache;
+    fastboot erase recovery;
+
+    fastboot format userdata;
+    fastboot format system;
+    fastboot format cache;
+    fastboot format recovery;
+
+    echo "Done";
+else
+    echo "Please run this script as root";
+fi;

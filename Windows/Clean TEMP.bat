@@ -1,0 +1,30 @@
+@echo off
+
+del /q /f /s %TEMP%
+del /q /f /s "C:\Windows\Temp"
+del /q /f /s "C:\Windows\Assembly\Temp"
+del /q /f /s "C:\Program Files (x86)\Microsoft\Temp"
+del /q /f /s "C:\ProgramData\Microsoft\Diagnosis\Temp"
+del /q /f /s "C:\ProgramData\Microsoft\Search\Data\Temp"
+del /q /f /s "C:\ProgramData\Microsoft\Windows\WER\Temp"
+del /q /f /s "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Temp"
+del /q /f /s "C:\Users\All Users\Microsoft\Diagnosis\Temp"
+del /q /f /s "C:\Users\All Users\Microsoft\Search\Data\Temp"
+del /q /f /s "C:\Users\All Users\Microsoft\Windows\WER\Temp"
+del /q /f /s "C:\Users\All Users\Microsoft\Windows Defender Advanced Threat Protection\Temp"
+del /q /f /s "C:\Users\Default\AppData\Local\Temp"
+del /q /f /s "C:\Windows\ServiceProfiles\LocalService\AppData\Local\Temp"
+del /q /f /s "C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Temp"
+del /q /f /s "C:\Windows\System32\config\systemprofile\AppData\Local\Packages\microsoft.windows.fontdrvhost\AC\Temp"
+del /q /f /s "C:\Windows\System32\DriverStore\Temp"
+del /q /f /s "C:\Windows\WinSxS\Temp"
+del /q /f /s "C:\ProgramData\Microsoft\Windows\LfSvc\Cache"
+del /q /f /s "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Cache"
+del /q /f /s "C:\Users\All Users\Microsoft\Windows\LfSvc\Cache"
+del /q /f /s "C:\Users\All Users\Microsoft\Windows Defender Advanced Threat Protection\Cache"
+del /q /f /s "C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Cache"
+del /q /f /s "C:\Windows\System32\spp\store\2.0\cache"
+del /q /f /s "C:\ProgramData\Microsoft\Windows\WER\ReportArchive"
+del /q /f /s "C:\ProgramData\Microsoft\Windows\WER\ReportQueue"
+
+ipconfig /flushdns

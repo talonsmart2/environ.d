@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block main %}
+    <h1>You've reached index!</h1>
+    <p>Flask-boilerplate is set up. Now code the next great app!</p>
+
+    <hr>
+
+    {% if logged_in %}
+        <p style="color: green">Welcome {{ logged_in }}, you are logged in!</p>
+    {% else %}
+        <p style="color: red">You are not logged in</p>
+    {% endif %}
+
+{% endblock %}
